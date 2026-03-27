@@ -1,0 +1,15 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+<div style="max-width: 720px; margin: 2.5rem auto; background: #ffffff; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.10); color: #2d2d2d;">
+    <h1 style="font-family: 'Playfair Display', serif; color: #1a1a2e; margin-bottom: 1rem;">Has cerrado sesión</h1>
+    <p style="font-size: 1rem; line-height: 1.7; margin-bottom: 1rem; color: #2d2d2d;">
+        Tu sesión en el panel de administración de <strong>Librería Folium</strong> ha finalizado correctamente.
+    </p>
+    <p style="font-size: 1rem; line-height: 1.7; color: #2d2d2d;">
+        Si quieres volver a entrar, puedes hacerlo desde
+        <a href="{% url 'admin:login' %}" style="color: #0f3460; font-weight: 600; text-decoration: none; border-bottom: 2px solid #e94560;">este enlace de acceso</a>.
+    </p>
+</div>
+{% endblock %}

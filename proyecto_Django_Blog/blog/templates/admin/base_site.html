@@ -1,0 +1,144 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | Librería Folium{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">📚 Librería Folium</a>
+</h1>
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+    /* ── Variables CSS del admin de Django (método correcto para Django 4+) ──
+       Django admin usa var(--primary), var(--header-bg), etc. internamente.
+       Redefinirlas en :root es la única forma garantizada de cambiar colores. */
+    :root {
+        --primary:                  #0f3460;
+        --secondary:                #16213e;
+        --accent:                   #e94560;
+
+        /* Header */
+        --header-bg:                #1a1a2e;
+        --header-color:             #ffffff;
+        --header-link-color:        #ffffff;
+        --header-branding-color:    #ffffff;
+
+        /* Breadcrumbs */
+        --breadcrumbs-bg:           #16213e;
+        --breadcrumbs-fg:           #a8b8d8;
+        --breadcrumbs-link-fg:      #f5a623;
+
+        /* Links */
+        --link-fg:                  #0f3460;
+        --link-hover-color:         #e94560;
+        --link-selected-fg:         #e94560;
+
+        /* Botones */
+        --button-bg:                #e94560;
+        --button-fg:                #ffffff;
+        --button-hover-bg:          #c73652;
+        --default-button-bg:        #0f3460;
+        --default-button-fg:        #ffffff;
+        --default-button-hover-bg:  #16213e;
+        --delete-button-bg:         #ba2121;
+        --delete-button-hover-bg:   #a41515;
+        --close-button-bg:          #555;
+        --close-button-hover-bg:    #333;
+
+        /* Fondos */
+        --body-bg:                  #f7f4ef;
+        --darkened-bg:              #f0ebe3;
+        --selected-bg:              #fff0f2;
+        --selected-row:             #fff3f0;
+
+        /* Bordes */
+        --hairline-color:           #e0d8d0;
+        --border-color:             #d0c8be;
+    }
+
+    /* ── Tipografía ── */
+    body, td, th, input, select, textarea, label, .help {
+        font-family: 'Inter', sans-serif !important;
+    }
+    #branding h1 {
+        font-family: 'Playfair Display', serif !important;
+        font-size: 1.35rem !important;
+    }
+
+    /* ── Borde inferior del header ── */
+    #header {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%) !important;
+        border-bottom: 3px solid #e94560 !important;
+        padding: 12px 20px !important;
+    }
+
+    /* ── Links del usuario conectado ── */
+    #user-tools a { color: #f5a623 !important; }
+
+    /* ── Módulos ── */
+    .module h2, .module caption, .inline-group h2 {
+        font-size: 0.78rem !important;
+        letter-spacing: 0.6px !important;
+        text-transform: uppercase !important;
+        font-weight: 500 !important;
+    }
+
+    /* ── Botones redondeados ── */
+    .button, input[type="submit"], input[type="button"],
+    .submit-row input, a.button {
+        border-radius: 6px !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 500 !important;
+    }
+
+    /* ── Filtros ── */
+    #changelist-filter { border-left: 3px solid #e94560 !important; }
+
+    /* ── Tabla ── */
+    #changelist table thead th {
+        text-transform: uppercase !important;
+        font-size: 0.78rem !important;
+        letter-spacing: 0.5px !important;
+        border-bottom: 2px solid #e94560 !important;
+    }
+
+    /* ── Formularios ── */
+    input[type="text"], input[type="password"], input[type="email"],
+    input[type="number"], textarea, select {
+        border-radius: 6px !important;
+        font-family: 'Inter', sans-serif !important;
+        color: #1f2937 !important;
+        background: #ffffff !important;
+        border: 1px solid #d0c8be !important;
+    }
+    input[type="text"]:focus, input[type="password"]:focus,
+    textarea:focus, select:focus {
+        box-shadow: 0 0 0 3px rgba(233,69,96,0.15) !important;
+        color: #111827 !important;
+        background: #ffffff !important;
+    }
+
+    input[type="text"]::placeholder, input[type="password"]::placeholder,
+    input[type="email"]::placeholder, textarea::placeholder {
+        color: #8b7d6b !important;
+        opacity: 1 !important;
+    }
+
+    /* ── Legibilidad general del contenido ── */
+    #content, #content-main, #content-related,
+    #content p, #content li, #content div:not(.breadcrumbs) {
+        color: #2d2d2d !important;
+    }
+
+    #content h1, #content h2, #content h3, #content h4 {
+        color: #1a1a2e !important;
+    }
+
+    /* (El login usa su propio template independiente) */
+</style>
+{% endblock %}
