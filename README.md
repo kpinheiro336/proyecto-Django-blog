@@ -7,18 +7,18 @@ Prototipo de blog desarrollado con **Django** para una librería independiente. 
 ## 📸 Capturas de pantalla
 
 ### Blog público
-![Blog - vista principal](screenshots/blog_foto1.png)
-![Blog - publicaciones](screenshots/blog_foto2.png)
+![Blog - vista principal](proyecto_Django_Blog/screenshots/blog_foto1.png)
+![Blog - publicaciones](proyecto_Django_Blog/screenshots/blog_foto2.png)
 
 ### Panel de administración
-![Login](screenshots/login_admin_blog.png)
-![Panel principal](screenshots/paneladmin_blog.png)
+![Login](proyecto_Django_Blog/screenshots/login_admin_blog.png)
+![Panel principal](proyecto_Django_Blog/screenshots/paneladmin_blog.png)
 
 ### Gestión de contenido
-![Agregar publicación](screenshots/addpost_blog.png)
-![Editar publicación](screenshots/changepost_blog.png)
-![Gestión de grupos](screenshots/addgroup_blog.png)
-![Gestión de usuarios](screenshots/users_blog.png)
+![Agregar publicación](proyecto_Django_Blog/screenshots/addpost_blog.png)
+![Editar publicación](proyecto_Django_Blog/screenshots/changepost_blog.png)
+![Gestión de grupos](proyecto_Django_Blog/screenshots/addgroup_blog.png)
+![Gestión de usuarios](proyecto_Django_Blog/screenshots/users_blog.png)
 
 ---
 
